@@ -1,0 +1,7 @@
+{
+  "name": "Cericoil",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
