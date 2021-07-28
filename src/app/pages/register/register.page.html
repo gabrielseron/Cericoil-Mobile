@@ -1,9 +1,42 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
 
+  <ion-row class="logo">
+    <ion-col size='12' class="ion-align-self-center">
+      <img src="assets/icon/logo.png" alt="logo">
+      <h1 class="appName">Cericoil</h1>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="form">
+    <ion-col size='12'>
+
+      <ion-item class="username">
+        <ion-label position="floating">Username</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item class="email">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input (keydown)="checkEmail()" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item class="password">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+
+      <ion-item class="repassword">
+        <ion-label position="floating">Re-Password</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-button [disabled]="isErrorMail" (click)="register()" expand="block"><p class="androidLetterSpacing">Register</p></ion-button >
+    </ion-col>
+
+  </ion-row>
+
+  <p class="registerTag">You already have any account ? <a routerLink="/login">Login</a></p>
+  
 </ion-content>

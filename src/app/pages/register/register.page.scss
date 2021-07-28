@@ -1,0 +1,64 @@
+.logo
+{
+    height: 40%;
+    text-align: center;
+    img
+    {
+        margin-bottom: 5%;
+        margin-top: 10vh;
+    }
+}
+
+.appName
+{
+    font-size: xx-large;
+    margin-top: -2%;
+}
+
+
+.form
+{
+    
+    padding: 5% 10% 0 10%;
+
+    .username
+    {
+        margin-top: -10%;
+    }
+
+
+    ion-button
+    {
+        --border-color: #0094fc;
+        --border-radius: 15vw !important;
+        p
+        {
+            color: #ffffff !important;
+            font-size: small;
+        }
+        ion-icon
+        {
+            fill: white;
+            margin-right: 3%;
+        }
+    }
+}
+
+.registerTag
+{
+    text-align: center;
+    font-family: poppins-regular;
+    font-size: 4vw !important;
+    color: #363636;
+}
+
+.ios .registerTag
+{
+    margin-bottom: 10%;
+}
+
+.md .androidLetterSpacing
+{
+    letter-spacing: 0;
+    text-transform: capitalize
+}

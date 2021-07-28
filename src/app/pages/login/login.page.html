@@ -1,9 +1,33 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-row class="logo">
+    <ion-col size='12' class="ion-align-self-center">
+      <img src="assets/icon/logo.png" alt="logo">
+      <h1 class="appName">Cericoil</h1>
+    </ion-col>
+  </ion-row>
 
+  <ion-row class="form">
+    <ion-col size='12'>
+
+      <ion-item class="email">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="userName"></ion-input>
+      </ion-item>
+
+      <ion-item class="password">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="12">
+      <p class="forgot gradientText" (click)="forgotPassword()">Can't login ?</p>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-button expand="block" (click)="loginForm()"><p class="androidLetterSpacing">Login</p></ion-button >
+    </ion-col>
+  </ion-row>
+
+  <p class="registerTag">You don't have any account ? <a routerLink="/register">Register</a></p>
 </ion-content>

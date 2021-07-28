@@ -1,6 +1,7 @@
 {
-	"appId": "io.ionic.starter",
+	"appId": "com.licoriceinc.cericoil",
 	"appName": "Cericoil",
+	"npmClient": "npm",
 	"webDir": "www",
 	"bundledWebRuntime": false
 }
