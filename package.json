@@ -1,9 +1,10 @@
 {
-  "name": "Cericoil",
+  "name": "cericoil",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
+    "lab": "ionic serve --lab",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -42,6 +43,7 @@
     "@angular/language-service": "~12.0.1",
     "@capacitor/cli": "3.1.2",
     "@ionic/angular-toolkit": "^4.0.0",
+    "@ionic/lab": "3.2.10",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
