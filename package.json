@@ -5,6 +5,7 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "lab": "ionic serve --lab",
+    "sync": "ionic cap sync",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -26,6 +27,7 @@
     "@capacitor/haptics": "1.0.2",
     "@capacitor/keyboard": "1.0.2",
     "@capacitor/status-bar": "1.0.2",
+    "@ionic-native/native-storage": "^5.34.0",
     "@ionic/angular": "^5.5.2",
     "cordova-plugin-nativestorage": "^2.3.2",
     "cordova-plugin-splashscreen": "^6.0.0",
