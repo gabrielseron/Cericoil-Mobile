@@ -37,7 +37,7 @@ export class AuthService
       this.http.post(this.url +'login/', user).subscribe((data: any) =>
       {      
         if (!data.token)
-          rejects (data.message)
+          rejects ("An error has occured")
         else
           resolve (data)
         });

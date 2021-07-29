@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoadingController, ModalController} from '@ionic/angular';
+import { LoadingController, ModalController, ToastController} from '@ionic/angular';
 import { Platform } from '@ionic/angular';
 import { AuthService } from '../../services/auth.service';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
@@ -29,6 +29,7 @@ export class LoginPage implements OnInit
     private auth: AuthService,
     private platform: Platform,
     private storage: NativeStorage,
+    private toast: ToastController,
   ) { }
 
   isErrorMail: boolean = true
@@ -63,7 +64,8 @@ export class LoginPage implements OnInit
       message: 'Please wait...',
     });
     await load.present();
-
+    console.log(this.user);
+    
     this.auth.login(this.user).then(async(user: any) =>
     {
       console.log(this.platform.platforms());
@@ -79,11 +81,22 @@ export class LoginPage implements OnInit
         await this.storage.setItem('nameUser', user.nameUser)
       }
         await this.loading.dismiss();
+        const toast = await this.toast.create(
+        {
+          message: 'Connected !',
+          duration: 2000
+        });
+        toast.present();
         this.router.navigate(['/tab'])
     }).catch(async() =>
     {
       await this.loading.dismiss();
-      this.router.navigate(['/tab'])
+      const toast = await this.toast.create(
+      {
+        message: 'An error has occured',
+        duration: 8000
+      });
+      toast.present();
     })
   }
 
