@@ -5,6 +5,7 @@ import { Platform } from '@ionic/angular';
 import { AuthService } from '../../services/auth.service';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { UserLogin } from 'src/app/interfaces/user';
+import { ForgotPasswordComponent } from '../../modals/forgot-password/forgot-password.component';
 
 @Component(
 {
@@ -44,11 +45,18 @@ export class LoginPage implements OnInit
     {
       token = await this.storage.getItem('token')
     }
-    console.log(token);
     if (token !== undefined && token !== null)
       this.router.navigate(['/tab'])
   }
 
+  async forgotPassword() 
+  {
+    const modal = await this.modal.create(
+      {
+      component: ForgotPasswordComponent,
+      });
+      return await modal.present();
+  }
   checkEmail() 
   {
     const regex = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g);

@@ -11,7 +11,7 @@
 
       <ion-item class="email">
         <ion-label position="floating">Email</ion-label>
-        <ion-input type="email" [(ngModel)]="user.mailUser"></ion-input>
+        <ion-input (keydown)="checkEmail()" type="email" [(ngModel)]="user.mailUser"></ion-input>
       </ion-item>
 
       <ion-item class="password">
@@ -21,11 +21,11 @@
     </ion-col>
 
     <ion-col size="12">
-      <p class="forgot gradientText" (click)="forgotPassword()">Can't login ?</p>
+      <p class="forgot" (click)="forgotPassword()">Can't login ?</p>
     </ion-col>
 
     <ion-col size="12">
-      <ion-button expand="block" (click)="loginForm()"><p class="androidLetterSpacing">Login</p></ion-button >
+      <ion-button expand="block" [disabled]="isErrorMail || user.mailUser.trim().length < 5 || user.passUser.trim().length < 5" (click)="loginForm()"><p class="androidLetterSpacing">Login</p></ion-button >
     </ion-col>
   </ion-row>
 

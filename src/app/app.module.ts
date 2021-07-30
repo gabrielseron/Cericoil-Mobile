@@ -8,11 +8,15 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import {​​ HttpClientModule }​​ from '@angular/common/http';
+import { ForgotPasswordComponent } from './modals/forgot-password/forgot-password.component';
+import { FormsModule } from '@angular/forms';
+
+
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ForgotPasswordComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, NativeStorage],
   bootstrap: [AppComponent],
 })

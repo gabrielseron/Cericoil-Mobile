@@ -22,7 +22,8 @@ const routes: Routes = [
   {
     path: 'profil',
     loadChildren: () => import('./pages/profil/profil.module').then( m => m.ProfilPageModule)
-  },
+  }
+
 ];
 
 @NgModule({

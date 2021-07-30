@@ -40,7 +40,18 @@ export class AuthService
           rejects ("An error has occured")
         else
           resolve (data)
-        });
+      });
     });
+  }
+
+  forget(mail: string)
+  {
+    return new Promise((resolve, rejects) =>
+    {
+      this.http.post(this.url +'forget/', {mailUser: mail}).subscribe((data: any) =>
+      {      
+        resolve ({error: data.error, message:data.message})
+      });
+    })
   }
 }
