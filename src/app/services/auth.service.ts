@@ -12,7 +12,7 @@ export class AuthService
   // url: string = "https://cericoil-14740.nodechef.com" 
 
   // offline url
-  url: string = "http://localhost:8081/auth/"
+  url: string = "http://192.168.0.24:8081/auth/"
 
   constructor
   (
