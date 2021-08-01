@@ -46,7 +46,7 @@ export class LoginPage implements OnInit
       token = await this.storage.getItem('token')
     }
     if (token !== undefined && token !== null)
-      this.router.navigate(['/tab'])
+      this.router.navigate(['/home'])
   }
 
   async forgotPassword() 
@@ -60,7 +60,6 @@ export class LoginPage implements OnInit
   checkEmail() 
   {
     const regex = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g);
-    // this.isErrorMail = !regex.test(this.email);
     this.isErrorMail = (regex.test(this.user.mailUser.trim())) ? false : true;
     console.log(this.isErrorMail);
   }
@@ -96,7 +95,7 @@ export class LoginPage implements OnInit
             duration: 2000
           });
           toast.present();
-          // this.router.navigate(['/tab'])
+          this.router.navigate(['/home'])
       } else
       {
         const toast = await this.toast.create(
