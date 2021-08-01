@@ -6,6 +6,8 @@
   "bundledWebRuntime": false,
   "server": {
     "url": "http://192.168.0.24:8101",
-    "cleartext": true
+    "cleartext": true,
+    "originalUrl": "http://192.168.0.24:8101",
+    "originalCleartext": true
   }
 }
