@@ -17,7 +17,7 @@
 
       <ion-item class="email">
         <ion-label position="floating">Email</ion-label>
-        <ion-input (keydown)="checkEmail()" type="email" [(ngModel)]="user.mailUser"></ion-input>
+        <ion-input (change)="checkEmail()" type="email" [(ngModel)]="user.mailUser"></ion-input>
       </ion-item>
 
       <ion-item class="password">
