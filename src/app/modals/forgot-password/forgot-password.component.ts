@@ -43,18 +43,6 @@ export class ForgotPasswordComponent implements OnInit
       })
   }
 
-  // async presentToast() 
-  // {
-  //   const toast = await this.toast.create({
-  //     message: 'A mail has been sent',
-  //     duration: 2000,
-  //     keyboardClose: true,
-  //     cssClass: 'mailSentToast',
-  //   });
-  //   toast.present();
-  //   this.close();
-  // }
-
   async resetForm() 
   {
     const load = await this.loading.create(
