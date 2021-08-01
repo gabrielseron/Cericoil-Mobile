@@ -74,38 +74,38 @@ export class LoginPage implements OnInit
     await load.present();
     console.log(this.user);
     
-    this.auth.login(this.user).then(async(user: any) =>
-    {
-      console.log(this.platform.platforms());
-      if (this.platform.is("desktop"))
-      {
-        localStorage.setItem('token', user.token)
-        localStorage.setItem('mailUser', this.user.mailUser)
-        localStorage.setItem('nameUser', user.nameUser)
-      } else
-      {
-        await this.storage.setItem('token', user.token)
-        await this.storage.setItem('mailUser', this.user.mailUser)
-        await this.storage.setItem('nameUser', user.nameUser)
-      }
-        await this.loading.dismiss();
-        const toast = await this.toast.create(
-        {
-          message: 'Connected !',
-          duration: 2000
-        });
-        toast.present();
-        this.router.navigate(['/tab'])
-    }).catch(async() =>
+    this.auth.login(this.user).then(async(data: any) =>
     {
       await this.loading.dismiss();
-      const toast = await this.toast.create(
+      if (!data.error)
       {
-        message: 'An error has occured',
-        duration: 8000
-      });
-      toast.present();
+        if (this.platform.is("desktop"))
+        {
+          localStorage.setItem('token', data.token)
+          localStorage.setItem('mailUser', this.user.mailUser)
+          localStorage.setItem('nameUser', data.nameUser)
+        } else
+        {
+          await this.storage.setItem('token', data.token)
+          await this.storage.setItem('mailUser', this.user.mailUser)
+          await this.storage.setItem('nameUser', data.nameUser)
+        }
+          const toast = await this.toast.create(
+          {
+            message: 'Connected !',
+            duration: 2000
+          });
+          toast.present();
+          // this.router.navigate(['/tab'])
+      } else
+      {
+        const toast = await this.toast.create(
+        {
+          message: data.message,
+          duration: 8000
+        });
+        toast.present();
+      }
     })
   }
-
 }

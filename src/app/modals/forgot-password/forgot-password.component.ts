@@ -81,13 +81,12 @@ export class ForgotPasswordComponent implements OnInit
           const toast = await this.toast.create(
           {
             message: data.message,
-            duration: 2000,
+            duration: 4000,
             keyboardClose: true,
             cssClass: 'mailSentToast',
           });
           toast.present();
         }
-        
     })
   }
 }
