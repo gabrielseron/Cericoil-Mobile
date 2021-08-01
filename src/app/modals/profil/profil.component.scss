@@ -1,0 +1,31 @@
+.header-md::after
+{
+    display: none;
+}
+
+ion-header
+{
+    ion-toolbar
+    {
+
+        --border-style: none;
+
+        ion-buttons
+        {
+            ion-icon
+            {
+                font-size: xx-large;
+            }
+        }
+    }
+}
+
+.logout
+    {
+        padding: 0 10%;
+        p
+        {
+            color: #ffffff !important;
+            font-family: poppins-semibold;
+        }
+    }

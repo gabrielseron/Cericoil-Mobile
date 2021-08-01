@@ -1,3 +1,13 @@
-<p>
-  profil works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="close()">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-col size="12">
+    <ion-button class="logout" (click)="logout()" expand="block"><p class="androidLetterSpacing">Log Out</p></ion-button>
+  </ion-col>
+</ion-content>
