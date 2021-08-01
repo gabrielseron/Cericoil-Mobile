@@ -63,6 +63,7 @@ export class ForgotPasswordComponent implements OnInit
             cssClass: 'mailSentToast',
           });
           toast.present();
+          this.emailCheck = ""
           this.close();
         } else
         {

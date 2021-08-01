@@ -90,6 +90,8 @@ export class LoginPage implements OnInit
           await this.storage.setItem('mailUser', this.user.mailUser)
           await this.storage.setItem('nameUser', data.nameUser)
         }
+          this.user.mailUser = ""
+          this.user.passUser = ""
           const toast = await this.toast.create(
           {
             message: 'Connected !',

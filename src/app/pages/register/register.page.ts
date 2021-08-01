@@ -65,6 +65,9 @@ export class RegisterPage implements OnInit
           duration: 2000
         });
         toast.present();
+          this.user.mailUser = "";
+          this.user.passUser = "";
+          this.user.nameUser = "";
         this.router.navigate(['/login'])
       } else
       {
