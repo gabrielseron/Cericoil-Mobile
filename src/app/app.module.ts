@@ -9,12 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import {​​ HttpClientModule }​​ from '@angular/common/http';
 import { ForgotPasswordComponent } from './modals/forgot-password/forgot-password.component';
+
 import { FormsModule } from '@angular/forms';
+import { ProfilComponent } from './modals/profil/profil.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, ForgotPasswordComponent],
+  declarations: [AppComponent, ForgotPasswordComponent, ProfilComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, NativeStorage],
