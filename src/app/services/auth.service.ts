@@ -21,36 +21,34 @@ export class AuthService
 
   register(user: UserRegister)
   { 
-    return new Promise((resolve, rejects) => 
+    return new Promise((resolve) => 
     {
       this.http.post(this.url +'register/', user).subscribe((data: any) => 
       {
-          (!data.message) ? rejects(data.message): resolve(data);
+        resolve (data)
       });
     });
   }
 
   login(user: UserLogin) 
   {
-    return new Promise((resolve, rejects) =>
+    return new Promise((resolve) =>
     {
       this.http.post(this.url +'login/', user).subscribe((data: any) =>
-      {      
-        if (!data.token)
-          rejects ("An error has occured")
-        else
-          resolve (data)
+      {
+        console.log({error: data.error, message:data.message, token: data.token, nameUser:data.nameUser});
+        resolve (data)
       });
     });
   }
 
   forget(mail: string)
   {
-    return new Promise((resolve, rejects) =>
+    return new Promise((resolve) =>
     {
       this.http.post(this.url +'forget/', {mailUser: mail}).subscribe((data: any) =>
       {      
-        resolve ({error: data.error, message:data.message})
+        resolve (data)
       });
     })
   }

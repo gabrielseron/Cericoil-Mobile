@@ -12,6 +12,7 @@
 .appName
 {
     font-size: xx-large;
+    font-family: poppins-semibold;
     margin-top: -2%;
 }
 
@@ -20,6 +21,10 @@
 {
     
     padding: 5% 10% 0 10%;
+    *
+    {
+        font-family: poppins-semibold;
+    }
 
     .username
     {

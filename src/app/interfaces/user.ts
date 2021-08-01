@@ -6,7 +6,7 @@ export interface UserLogin
 
 export interface UserRegister
 {
-    mailUser: string,
     nameUser: string,
+    mailUser: string,
     passUser: string
 }

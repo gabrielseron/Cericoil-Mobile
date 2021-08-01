@@ -12,27 +12,27 @@
 
       <ion-item class="username">
         <ion-label position="floating">Username</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="user.nameUser"></ion-input>
       </ion-item>
 
       <ion-item class="email">
         <ion-label position="floating">Email</ion-label>
-        <ion-input (keydown)="checkEmail()" type="email"></ion-input>
+        <ion-input (keydown)="checkEmail()" type="email" [(ngModel)]="user.mailUser"></ion-input>
       </ion-item>
 
       <ion-item class="password">
         <ion-label position="floating">Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" [(ngModel)]="user.passUser"></ion-input>
       </ion-item>
 
       <ion-item class="repassword">
         <ion-label position="floating">Re-Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" [(ngModel)]="rePassUser"></ion-input>
       </ion-item>
     </ion-col>
 
     <ion-col size="12">
-      <ion-button [disabled]="isErrorMail" (click)="register()" expand="block"><p class="androidLetterSpacing">Register</p></ion-button >
+      <ion-button [disabled]="isErrorMail || user.nameUser.trim().length < 5 || user.mailUser.trim().length < 5 || user.passUser.trim().length < 5 || user.passUser != rePassUser" (click)="registerForm()" expand="block"><p class="androidLetterSpacing">Register</p></ion-button >
     </ion-col>
 
   </ion-row>
