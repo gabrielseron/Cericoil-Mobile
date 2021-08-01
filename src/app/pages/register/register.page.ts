@@ -41,7 +41,6 @@ export class RegisterPage implements OnInit
   checkEmail() 
   {
     const regex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
-    // this.isErrorMail = !regex.test(this.email);
     this.isErrorMail = (regex.test(this.user.mailUser.trim())) ? false : true;
     console.log(this.isErrorMail);
   }
@@ -66,7 +65,7 @@ export class RegisterPage implements OnInit
           duration: 2000
         });
         toast.present();
-        // this.router.navigate(['/tab'])
+        this.router.navigate(['/login'])
       } else
       {
         const toast = await this.toast.create(
