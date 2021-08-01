@@ -19,16 +19,11 @@
 
 .form
 {
-    
+
     padding: 5% 10% 0 10%;
     *
     {
         font-family: poppins-semibold;
-    }
-
-    .username
-    {
-        margin-top: -10%;
     }
 
 
@@ -47,6 +42,11 @@
             margin-right: 3%;
         }
     }
+}
+
+ion-item
+{
+    --background: none;
 }
 
 .registerTag
