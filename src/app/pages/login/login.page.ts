@@ -88,7 +88,7 @@ export class LoginPage implements OnInit
         {
           await this.storage.setItem('token', data.token)
           await this.storage.setItem('mailUser', this.user.mailUser)
-          await this.storage.setItem('nameUser', data.nameUser)
+          await this.storage.setItem('nameUser', JSON.stringify(data.nameUser))
         }
           this.user.mailUser = ""
           this.user.passUser = ""
