@@ -33,12 +33,11 @@ export class ProfilComponent implements OnInit {
     if (this.platform.is("desktop"))
       {
         localStorage.clear()
-        // await this.router.navigate(['/login'])
       } else
       {
         await this.storage.clear();
-        // await this.router.navigate(['/login'])
       }
     this.close()
+    this.router.navigate(['login']);
   }
 }
