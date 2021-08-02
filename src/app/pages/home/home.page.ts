@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController, Platform } from '@ionic/angular';
 import { ProfilComponent } from '../../modals/profil/profil.component';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,20 +11,29 @@ import { Router } from '@angular/router';
 export class HomePage implements OnInit
 {
 
+  nameUser : any
+
   constructor
   (
     private modal: ModalController,
     private storage: NativeStorage,
     private platform: Platform,
-    private router: Router,
   ) {}
 
-  ngOnInit() 
+  
+
+  async ngOnInit() 
   {
-    
+    if (this.platform.is("desktop"))
+    {
+      this.nameUser = localStorage.getItem('nameUser')
+    } else
+    {
+      this.nameUser = await this.storage.getItem('nameUser')
+      this.nameUser = this.nameUser.replace(/['"]+/g, '')
+    }
   }
 
-    
 
   async openProfil()
   {
@@ -33,16 +41,6 @@ export class HomePage implements OnInit
     {
       component: ProfilComponent
     });
-    modal.onDidDismiss().then(()=>
-    {
-      if (this.platform.is("desktop") && (!localStorage.getItem('token') || !localStorage.getItem('mailUser') || !localStorage.getItem('nameUser')))
-      {
-        this.router.navigate(['login']);
-      } else if(!this.storage.getItem('token') || !this.storage.getItem('mailUser') || !this.storage.getItem('nameUser'))
-      {
-        this.router.navigate(['login']);
-      }
-    })
     return await modal.present();
   }
 }
