@@ -9,8 +9,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div>
-    <strong>Good morning {{ nameUser }}</strong>
-  </div>
+<ion-content [fullscreen]="true">
+  <ion-row>
+
+    <ion-col size="12" class="welcome">
+      <strong>{{welcomeMessage}} {{ nameUser }}</strong>
+    </ion-col>
+
+    <ion-col size="12" class="analyzeField">
+      <ion-item>
+        <ion-label position="floating" class="gradientText">Mail to analyze</ion-label>
+        <ion-input inputmode="email" (change)="checkEmail()" type="email" [(ngModel)]="analyzedMail"></ion-input>
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="12" class="button">
+      <ion-button [disabled]="isErrorMail" expand="block" (click)="analyzeMail()">Analyze</ion-button>
+    </ion-col>
+
+  </ion-row>
 </ion-content>

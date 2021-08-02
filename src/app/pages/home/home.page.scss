@@ -13,36 +13,49 @@ ion-header
     }
   }
 }
-  
 
-#container
+ion-row
 {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10vw;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
-#container strong
-{
-  font-size: 20px;
-  line-height: 26px;
-}
 
-#container p
-{
-  font-size: 16px;
-  line-height: 22px;
+  .welcome
+  {
+    text-align: center;
+    margin-top: 5vh;
 
-  color: #8c8c8c;
+    strong
+    {
+      font-size: x-large;
+      line-height: 26px;
+    }
+  }
 
-  margin: 0;
-}
+  .analyzeField
+  {
+    margin-top: 35vw;
+    ion-item
+    {
+      --background: none;
+        border: 1px solid gray;
+        border-radius: 10px !important;
+      // ion-input
+      // {
+      // }
+    }
+  }
 
-#container a
-{
-  text-decoration: none;
+  // .button
+  // {
+  //   ion-button
+  //   {
+  //   }
+  // }
+
 }
