@@ -21,6 +21,14 @@ const routes: Routes = [
   },  {
     path: 'analyze',
     loadChildren: () => import('./pages/analyze/analyze.module').then( m => m.AnalyzePageModule)
+  },
+  {
+    path: 'iqs',
+    loadChildren: () => import('./pages/iqs/iqs.module').then( m => m.IqsPageModule)
+  },
+  {
+    path: 'seon',
+    loadChildren: () => import('./pages/seon/seon.module').then( m => m.SeonPageModule)
   }
 
 ];
