@@ -14,7 +14,7 @@ export class HomePage implements OnInit
 {
 
   nameUser : string
-  welcomeMessage : any
+  welcomeMessage : string
   isErrorMail: boolean = true
   analyzedMail: string
 
@@ -54,8 +54,6 @@ export class HomePage implements OnInit
   getHours()
   {
     const date = new Date()
-    console.log(date.getHours());
-    
     if (date.getHours() > 7 && date.getHours() < 13)
     {
       return "Good morning "
@@ -69,7 +67,6 @@ export class HomePage implements OnInit
     {
       return "Good night "
     }
-    
   }
 
   async openProfil()
