@@ -2,15 +2,26 @@ ion-header
 {
     ion-toolbar
     {
-
-        --border-style: none;
-
         ion-buttons
         {
             ion-icon
             {
                 font-size: xx-large;
             }
+        }
+    }
+}
+
+ion-tab-bar
+{
+    padding: 0 5%;
+    
+    ion-tab-button
+    {
+        --color-selected: #0094fc !important;
+        img
+        {
+            height: 75%;
         }
     }
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-analyze',
   templateUrl: './analyze.page.html',
@@ -8,12 +7,15 @@ import { Router } from '@angular/router';
 })
 export class AnalyzePage implements OnInit {
 
+  iqs: any
   constructor
   (
     private router: Router,
+
   ) { }
 
-  ngOnInit() {
+  async ngOnInit()
+  {
   }
 
   close()
