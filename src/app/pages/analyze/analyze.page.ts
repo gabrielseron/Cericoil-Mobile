@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
 })
 export class AnalyzePage implements OnInit {
 
-  iqs: any
   constructor
   (
     private router: Router,

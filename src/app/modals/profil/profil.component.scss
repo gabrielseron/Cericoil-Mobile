@@ -38,11 +38,16 @@ ion-content
     }
 }
 .logout
+{
+    padding: 0 10%;
+    p
     {
-        padding: 0 10%;
-        p
-        {
-            color: #ffffff !important;
-            font-family: poppins-semibold;
-        }
+        color: #ffffff !important;
+        font-family: poppins-semibold;
     }
+}
+
+.popover-content
+{
+    --width: 50vw
+}

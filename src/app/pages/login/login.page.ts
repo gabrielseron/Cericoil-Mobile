@@ -62,7 +62,6 @@ export class LoginPage implements OnInit
   {
     const regex = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g);
     this.isErrorMail = (regex.test(this.user.mailUser.trim())) ? false : true;
-    console.log(this.isErrorMail);
   }
 
   async loginForm() 

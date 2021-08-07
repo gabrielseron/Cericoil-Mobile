@@ -78,8 +78,7 @@ export class SeonPage implements OnInit
     if (this.seon.seonAmazonExist == 1)
       this.seon.seonAmazonExist = true;
     else
-      this.seon.seonAmazonExist = false
-
+    this.seon.seonAmazonExist = false
   }
 
 }
