@@ -1,3 +1,24 @@
-<p>
-  change-pass works!
-</p>
+<ion-content>
+  <h1 class="ion-align-self-center">Change Password</h1>
+
+  <ion-col size="12">
+    <ion-item class="newPass">
+      <ion-label position="floating">New Password</ion-label>
+      <ion-input type="password" [(ngModel)]="newPassUser"></ion-input>
+    </ion-item>
+
+    <ion-item class="newPass">
+      <ion-label position="floating">Confirmation</ion-label>
+      <ion-input type="password" [(ngModel)]="reNewPassUser"></ion-input>
+    </ion-item>
+  
+    <ion-item class="oldPass">
+      <ion-label position="floating">Current Password</ion-label>
+      <ion-input type="password" [(ngModel)]="passUser"></ion-input>
+    </ion-item>
+  </ion-col>
+
+    <ion-col size="12">
+      <ion-button expand="block" [disabled]=" newPassUser.trim().length < 5 || passUser.trim().length < 5 || newPassUser.trim().length != reNewPassUser.trim().length" (click)="changePass()"><p class="androidLetterSpacing">Change</p></ion-button >
+    </ion-col>
+</ion-content>

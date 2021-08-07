@@ -1,3 +1,19 @@
-<p>
-  change-mail works!
-</p>
+<ion-content>
+  <h1 class="ion-align-self-center">Change Mail</h1>
+
+  <ion-col size="12">
+    <ion-item class="email">
+      <ion-label position="floating">New Email</ion-label>
+      <ion-input (change)="checkEmail()" type="email" [(ngModel)]="newMailUser"></ion-input>
+    </ion-item>
+  
+    <ion-item class="pass">
+      <ion-label position="floating">Current Password</ion-label>
+      <ion-input type="email" [(ngModel)]="passUser"></ion-input>
+    </ion-item>
+  </ion-col>
+
+    <ion-col size="12">
+      <ion-button expand="block" [disabled]="isErrorMail || mailUser.trim().length < 5 || passUser.trim().length < 5" (click)="changeMail()"><p class="androidLetterSpacing">Change</p></ion-button >
+    </ion-col>
+</ion-content>

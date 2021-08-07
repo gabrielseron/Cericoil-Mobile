@@ -20,7 +20,7 @@ export class AuthService
   ) { }
 
   register(user: UserRegister)
-  { 
+  {
     return new Promise((resolve) => 
     {
       this.http.post(this.url +'register/', user).subscribe((data: any) => 
@@ -47,7 +47,40 @@ export class AuthService
     return new Promise((resolve) =>
     {
       this.http.post(this.url +'forget/', {mailUser: mail}).subscribe((data: any) =>
-      {      
+      {
+        resolve (data)
+      });
+    })
+  }
+
+  changeMail(oldMail: string, newMail: string, pass: string)
+  {
+    return new Promise((resolve) =>
+    {
+      this.http.post(this.url +'changeMail/', {oldMailUser: oldMail, newMailUser: newMail, passUser: pass}).subscribe((data: any) =>
+      {
+        resolve (data)
+      });
+    })
+  }
+
+  changePass(mailUser: string, oldPass: string, newPass: string)
+  {
+    return new Promise((resolve) =>
+    {
+      this.http.post(this.url +'changePass/', {mailUser: mailUser, oldPass: oldPass, newPass: newPass}).subscribe((data: any) =>
+      {
+        resolve (data)
+      });
+    })
+  }
+
+  deleteAccount(mailUser: string, nameUser: string)
+  {
+    return new Promise((resolve) =>
+    {
+      this.http.post(this.url +'deleteAccount/', {mailUser: mailUser, nameUser: nameUser}).subscribe((data: any) =>
+      {
         resolve (data)
       });
     })
