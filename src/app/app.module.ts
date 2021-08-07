@@ -12,11 +12,14 @@ import { ForgotPasswordComponent } from './modals/forgot-password/forgot-passwor
 
 import { FormsModule } from '@angular/forms';
 import { ProfilComponent } from './modals/profil/profil.component';
+import { IntPropComponent } from './popover/int-prop/int-prop.component';
+import { ChangeMailComponent } from './popover/change-mail/change-mail.component';
+import { ChangePassComponent } from './popover/change-pass/change-pass.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, ForgotPasswordComponent, ProfilComponent],
+  declarations: [AppComponent, ForgotPasswordComponent, ProfilComponent, IntPropComponent, ChangeMailComponent, ChangePassComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, NativeStorage],

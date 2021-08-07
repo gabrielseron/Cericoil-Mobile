@@ -20,6 +20,23 @@ ion-header
     }
 }
 
+ion-content
+{
+    ion-list
+    {
+        background: var(--background) !important;
+        h4
+        {
+            margin-left: 4vw;
+            background-color: var(--background) !important;
+        }
+        .item
+        {
+            --background: var(--background) !important;
+            padding: 0 5%;
+        }
+    }
+}
 .logout
     {
         padding: 0 10%;
