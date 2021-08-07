@@ -26,7 +26,7 @@ export class SeonPage implements OnInit
     {
       this.seon = JSON.parse(await this.storage.getItem('seon'))
     }
-    
+
     if (this.seon.seonDisposable == 1)
       this.seon.seonDisposable = true;
     else
@@ -79,9 +79,7 @@ export class SeonPage implements OnInit
       this.seon.seonAmazonExist = true;
     else
       this.seon.seonAmazonExist = false
-    
-    console.log(this.seon);
-    
+
   }
 
 }

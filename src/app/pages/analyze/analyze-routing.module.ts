@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AnalyzePage } from './analyze.page';
-import { IqsPageModule } from '../iqs/iqs.module';
 
 const routes: Routes =
 [
