@@ -9,10 +9,10 @@ export class AuthService
 {
 
   // online url
-  // url: string = "https://cericoil-14740.nodechef.com" 
+  url: string = "https://cericoil-14740.nodechef.com/auth/" 
 
   // offline url
-  url: string = "http://192.168.0.24:8081/auth/"
+  // url: string = "http://192.168.0.24:8081/auth/"
 
   constructor
   (
@@ -53,22 +53,22 @@ export class AuthService
     })
   }
 
-  changeMail(oldMail: string, newMail: string, pass: string)
+  changeMail(mailUser: string, newMail: string, pass: string)
   {
     return new Promise((resolve) =>
     {
-      this.http.post(this.url +'changeMail/', {oldMailUser: oldMail, newMailUser: newMail, passUser: pass}).subscribe((data: any) =>
+      this.http.post(this.url +'changeMail/', {mailUser: mailUser, newMailUser: newMail, passUser: pass}).subscribe((data: any) =>
       {
         resolve (data)
       });
     })
   }
 
-  changePass(mailUser: string, oldPass: string, newPass: string)
+  changePass(mailUser: string, passUser: string, newPassUser: string)
   {
     return new Promise((resolve) =>
     {
-      this.http.post(this.url +'changePass/', {mailUser: mailUser, oldPass: oldPass, newPass: newPass}).subscribe((data: any) =>
+      this.http.post(this.url +'changePass/', {mailUser: mailUser, passUser: passUser, newPassUser: newPassUser}).subscribe((data: any) =>
       {
         resolve (data)
       });

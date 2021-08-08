@@ -7,10 +7,10 @@ export class AnalyzeService
 {
 
   // online url
-  // url: string = "https://cericoil-14740.nodechef.com" 
+  url: string = "https://cericoil-14740.nodechef.com/verif/" 
 
   // offline url
-  url: string = "http://192.168.0.24:8081/verif/"
+  // url: string = "http://192.168.0.24:8081/verif/"
 
   constructor
   (
