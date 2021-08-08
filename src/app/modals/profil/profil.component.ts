@@ -105,7 +105,6 @@ export class ProfilComponent implements OnInit
                   localStorage.clear()
                 else
                   await this.storage.clear();
-                
                 this.mailUser = ""
                 this.nameUser = ""
                 const toast = await this.toast.create(
@@ -114,7 +113,8 @@ export class ProfilComponent implements OnInit
                   duration: 2000
                 });
                 toast.present();
-                this.router.navigate(['/login']);
+                this.close()
+                this.router.navigate(['login']);
               } else
               {
                 const toast = await this.toast.create(

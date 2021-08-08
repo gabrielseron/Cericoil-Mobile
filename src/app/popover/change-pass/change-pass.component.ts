@@ -32,6 +32,7 @@ export class ChangePassComponent implements OnInit
       this.mailUser = await this.storage.getItem('mailUser')
       this.mailUser = this.mailUser.replace(/['"]+/g, '')
     }
+    console.log(this.mailUser);
   }
 
   async changePass()

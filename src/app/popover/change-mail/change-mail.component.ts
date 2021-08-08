@@ -57,10 +57,10 @@ export class ChangeMailComponent implements OnInit
       {
         if (this.platform.is("desktop"))
         {
-          localStorage.setItem('mailUser', data.newMailUser)
+          localStorage.setItem('mailUser', this.newMailUser)
         } else
         {
-          await this.storage.setItem('mailUser', data.newMailUser)
+          await this.storage.setItem('mailUser', this.newMailUser)
         }
         this.mailUser = ""
         this.passUser = ""
