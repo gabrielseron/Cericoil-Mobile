@@ -6,6 +6,7 @@
   "scripts": {
     "lab": "ionic serve --lab",
     "android": "ionic capacitor run android -l --external",
+    "androidBuild (delete server in capacitor.config.json before)": "ionic capacitor build",
     "sync": "ionic cap sync",
     "ng": "ng",
     "start": "ng serve",
