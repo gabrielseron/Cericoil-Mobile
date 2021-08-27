@@ -1,39 +1,55 @@
 <ion-content>
-  <ion-row>
-    <p>Mail : {{iqs.iqsMail}}</p>
-  </ion-row>
-  <ion-row>
-    <p>Temporary : {{iqs.iqsDisposable}}</p>
-  </ion-row>
-  <ion-row>
-    <p>Smtp Score : {{iqs.iqsSmtpScore}}</p>
-  </ion-row>
-  <ion-row>
-    <p>Overall Score : {{iqs.iqsOverallScore}}</p>
-  </ion-row>
-  <ion-row>
-    <p>First Name : {{iqs.iqsFirstName}}</p>
-  </ion-row>
-  <ion-row>
-    <p>Common : {{iqs.iqsCommon}}</p>
-  </ion-row>
-  <ion-row>
-    <p>Generic : {{iqs.iqsGeneric}}</p>
-  </ion-row>
-  <ion-row>
-    <p>Dns Valid : {{iqs.iqsDnsValid}}</p>
-  </ion-row>
-  <ion-row>
-    <p>Honeypot : {{iqs.iqsHoneypot}}</p>
-  </ion-row>
-  <ion-row>
-    <p>Fraud Score : {{iqs.iqsFraudScore}}</p>
-  </ion-row>
-  <ion-row>
-    <p>Frequent Complainer : {{iqs.iqsFrequentComplainer}}</p>
-  </ion-row>
-  <ion-row>
-    <p>Added by : {{iqs.iqsAddedBy}}</p>
-  </ion-row>
-
+  <table>
+    <thead>
+      <tr>
+          <th colspan="2"><a target="_blank" href="https://www.ipqualityscore.com/documentation/email-validation/overview#:~:text=or%20creation%20date.-,Field,Possible%20Values,-valid" class="iqsLink">Iqs</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="key">Mail : </td>
+          <td class="result">{{iqs.iqsMail}}</td>
+      </tr>
+      <tr>
+        <td class="key">Overall : </td>
+        <td class="result">{{iqs.iqsOverallScore}}</td>
+      </tr>
+      <tr>
+        <td class="key">Smtp : </td>
+        <td class="result">{{iqs.iqsSmtpScore}}</td>
+      </tr>
+      <tr>
+        <td class="key">Common : </td>
+        <td class="result">{{iqs.iqsCommon}}</td>
+      </tr>
+      <tr>
+        <td class="key">FirstName : </td>
+        <td class="result">{{iqs.iqsFirstName}}</td>
+      </tr>
+      <tr>
+        <td class="key">Common : </td>
+        <td class="result">{{iqs.iqsCommon}}</td>
+      </tr>
+      <tr>
+        <td class="key">Generic : </td>
+        <td class="result">{{iqs.iqsGeneric}}</td>
+      </tr>
+      <tr>
+        <td class="key">Valid DNS : </td>
+        <td class="result">{{iqs.iqsDnsValid}}</td>
+      </tr>
+      <tr>
+        <td class="key">Honeypot : </td>
+        <td class="result">{{iqs.iqsHoneypot}}</td>
+      </tr>
+      <tr>
+        <td class="key">Frequent Complainer : </td>
+        <td class="result">{{iqs.iqsFrequentComplainer}}</td>
+      </tr>
+      <tr>
+        <td class="key">Added By : </td>
+        <td class="result">{{iqs.iqsAddedBy}}</td>
+      </tr>
+    </tbody>
+  </table>
 </ion-content>

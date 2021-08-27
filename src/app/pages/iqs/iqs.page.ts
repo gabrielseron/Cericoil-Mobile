@@ -26,34 +26,16 @@ export class IqsPage implements OnInit
       this.iqs = JSON.parse(await this.storage.getItem('iqs'))
     }
 
-    if (this.iqs.iqsDisposable == 1)
-      this.iqs.iqsDisposable = true;
-    else
-      this.iqs.iqsDisposable = false
-    
-    if (this.iqs.iqsCommon == 1)
-      this.iqs.iqsCommon = true;
-    else
-      this.iqs.iqsCommon = false
-    
-    if (this.iqs.iqsGeneric == 1)
-      this.iqs.iqsGeneric = true;
-    else
-      this.iqs.iqsGeneric = false
-    
-    if (this.iqs.iqsDnsValid == 1)
-      this.iqs.iqsDnsValid = true;
-    else
-      this.iqs.iqsDnsValid = false
-    
-    if (this.iqs.iqsHoneypot == 1)
-      this.iqs.iqsHoneypot = true;
-    else
-      this.iqs.iqsHoneypot = false
-    
-    if (this.iqs.iqsFrequentComplainer == 1)
-      this.iqs.iqsFrequentComplainer = true;
-    else
-      this.iqs.iqsFrequentComplainer = false
+    delete this.iqs.table
+    for (let [key, value] of Object.entries(this.iqs))
+    {
+        if (key != "iqsFraudScore" && key != "iqsSmtpScore" && key != "iqsOverallScore" && key != "iqsAddedBy" && key != "iqsMail" && key != "iqsFirstName")
+        {
+          if (value == 0)
+            this.iqs[key] = false
+          else
+            this.iqs[key] = true
+        }
+    };
   }
 }

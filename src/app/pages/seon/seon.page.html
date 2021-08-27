@@ -1,51 +1,75 @@
 <ion-content>
-    <ion-row>
-      <p>Mail : {{seon.seonMail}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Score : {{seon.seonScore}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Temporary : {{seon.seonDisposable}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Delivrable : {{seon.seonDeliverable}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Free : {{seon.seonFree}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Custom : {{seon.seonCustom}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Suspicious TLD : {{seon.seonSuspiciousTld}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Website : {{seon.seonWebsiteExist}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Facebook : {{seon.seonFacebookExist}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Google : {{seon.seonGoogleExist}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Twitter : {{seon.seonTwitterExist}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Microsoft : {{seon.seonMicrosoftExist}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Linkedin : {{seon.seonLinkedinExist}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Discord : {{seon.seonDiscordExist}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Amazon : {{seon.seonAmazonExist}}</p>
-    </ion-row>
-    <ion-row>
-      <p>Addeb by : {{seon.seonAddedBy}}</p>
-    </ion-row>
-  </ion-content>
-  
+    <table>
+      <thead>
+        <tr>
+            <th colspan="2"><a target="_blank" href="https://docs.seon.io/api-reference#email-api-response" class="seonLink">Seon</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td class="key">Mail : </td>
+            <td class="result">{{seon.seonMail}}</td>
+        </tr>
+        <tr>
+          <td class="key">Score : </td>
+          <td class="result">{{seon.seonScore}}</td>
+        </tr>
+        <tr>
+          <td class="key">Deliverable : </td>
+          <td class="result">{{seon.seonDeliverable}}</td>
+        </tr>
+        <tr>
+          <td class="key">Free : </td>
+          <td class="result">{{seon.seonFree}}</td>
+        </tr>
+        <tr>
+          <td class="key">Custom : </td>
+          <td class="result">{{seon.seonCustom}}</td>
+        </tr>
+        <tr>
+          <td class="key">Disposable : </td>
+          <td class="result">{{seon.seonDisposable}}</td>
+        </tr>
+        <tr>
+          <td class="key">Suspicious Tld : </td>
+          <td class="result">{{seon.seonSuspiciousTld}}</td>
+        </tr>
+        <tr>
+          <td class="key">{{domain}} exist : </td>
+          <td class="result">{{seon.seonWebsiteExist}}</td>
+        </tr>
+        <tr>
+          <td class="key">Facebook : </td>
+          <td class="result">{{seon.seonFacebookExist}}</td>
+        </tr>
+        <tr>
+          <td class="key">Google : </td>
+          <td class="result">{{seon.seonGoogleExist}}</td>
+        </tr>
+        <tr>
+          <td class="key">Twitter : </td>
+          <td class="result">{{seon.seonTwitterExist}}</td>
+        </tr>
+        <tr>
+          <td class="key">Microsoft : </td>
+          <td class="result">{{seon.seonMicrosoftExist}}</td>
+        </tr>
+        <tr>
+          <td class="key">Linkedin : </td>
+          <td class="result">{{seon.seonLinkedinExist}}</td>
+        </tr>
+        <tr>
+          <td class="key">Discord : </td>
+          <td class="result">{{seon.seonDiscordExist}}</td>
+        </tr>
+        <tr>
+          <td class="key">Amazon : </td>
+          <td class="result">{{seon.seonAmazonExist}}</td>
+        </tr>
+        <tr>
+          <td class="key">Added By : </td>
+          <td class="result">{{seon.seonAddedBy}}</td>
+        </tr>
+      </tbody>
+    </table>
+</ion-content>
