@@ -1,3 +1,8 @@
+*
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .logo
 {
     height: 40%;
@@ -12,7 +17,6 @@
 .appName
 {
     font-size: xx-large;
-    font-family: poppins-semibold;
     margin-top: -2%;
 }
 
@@ -21,10 +25,6 @@
 {
 
     padding: 5% 10% 0 10%;
-    *
-    {
-        font-family: poppins-semibold;
-    }
 
 
     ion-button
@@ -52,7 +52,6 @@ ion-item
 .registerTag
 {
     text-align: center;
-    font-family: poppins-regular;
     font-size: 4vw !important;
     color: #363636;
 }

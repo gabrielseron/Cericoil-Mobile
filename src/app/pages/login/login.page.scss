@@ -1,3 +1,8 @@
+*
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .logo
 {
     height: 40%;
@@ -12,7 +17,6 @@
 .appName
 {
     font-size: xx-large;
-    font-family: poppins-semibold;
     margin-top: -2%;
 }
 
@@ -20,10 +24,7 @@
 {
     
     padding: 15% 10%;
-    *
-    {
-        font-family: poppins-semibold;
-    }
+
     
     .email
     {
@@ -34,7 +35,6 @@
     {
         text-align: end;
         margin: -2% 0 0 0;
-        font-family: poppins-regular !important;
         font-size: small;
     }
 
@@ -63,7 +63,6 @@ ion-item
 .registerTag
 {
     text-align: center;
-    font-family: poppins-regular;
     font-size: 4vw !important;
     color: #363636;
 }
