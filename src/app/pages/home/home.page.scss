@@ -1,7 +1,14 @@
+*
+{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 ion-header
 {
   ion-toolbar
   {
+    --background: #2196f3;
+    --color: white;
     ion-buttons
     {
       padding-right: 5vw;

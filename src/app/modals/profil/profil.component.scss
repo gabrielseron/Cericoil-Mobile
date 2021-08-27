@@ -1,3 +1,8 @@
+*
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .header-md::after
 {
     display: none;
@@ -7,9 +12,9 @@ ion-header
 {
     ion-toolbar
     {
-
+        --background: #2196f3;
+        --color: white;
         --border-style: none;
-
         ion-buttons
         {
             ion-icon
@@ -43,7 +48,6 @@ ion-content
     p
     {
         color: #ffffff !important;
-        font-family: poppins-semibold;
     }
 }
 
